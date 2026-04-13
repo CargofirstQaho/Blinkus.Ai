@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { motion, AnimatePresence } from "framer-motion"
 import { signOut } from "firebase/auth"
 import { auth } from "../utils/firebase"
-import { clearUser } from "../redux/slices/authSlice"
+// import { clearUser } from "../redux/slices/authSlice"
 import { clearChat } from "../redux/slices/chatSlice"
 import logo from "../assets/logo2.png"
 
@@ -16,7 +16,7 @@ export default function Sidebar({ isOpen, onClose }) {
 
   const handleLogout = async () => {
     await signOut(auth)
-    dispatch(clearUser())
+    // dispatch(clearUser())
     dispatch(clearChat())
     onClose()
   }
