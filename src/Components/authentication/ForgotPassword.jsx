@@ -59,7 +59,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { api } from "../../utils/api"
-import { c, Spinner, InputField } from "./authShared"
+import { c, Spinner, InputField } from "./AuthShared"
 
 export default function ForgotPassword({ onSuccess, onBack }) {
   const [email, setEmail] = useState("")

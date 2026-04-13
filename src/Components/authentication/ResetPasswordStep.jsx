@@ -81,7 +81,7 @@ import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { motion } from "framer-motion"
 import { api } from "../../utils/api"
-import { c, P, Spinner, InputField, PasswordStrength } from "./authShared"
+import { c, P, Spinner, InputField, PasswordStrength } from "./AuthShared"
 
 export default function ResetPasswordStep({ email, otp, onSuccess }) {
   const dispatch = useDispatch()

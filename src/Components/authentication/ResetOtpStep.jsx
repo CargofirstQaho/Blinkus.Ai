@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
 import { api } from "../../utils/api"
-import { c, N, Spinner, OtpInput } from "./authShared"
+import { c, N, Spinner, OtpInput } from "./AuthShared"
 
 export default function ResetOtpStep({ email, onSuccess }) {
   const [otp, setOtp] = useState("")

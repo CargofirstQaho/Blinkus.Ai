@@ -2,7 +2,7 @@ import { useState, useCallback, useRef, useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { motion } from "framer-motion"
 import { api } from "../../utils/api"
-import { c, N, P, PL, font, Spinner, OtpInput } from "./authShared"
+import { c, N, P, PL, font, Spinner, OtpInput } from "./AuthShared"
 
 export default function OtpVerify({ email, onSuccess, onBack }) {
   const dispatch = useDispatch()

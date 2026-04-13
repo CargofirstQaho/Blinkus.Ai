@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { motion } from "framer-motion"
 import { clearError } from "../../redux/slices/authSlice"
 import { api } from "../../utils/api"
-import { c, P, font, Spinner, GoogleSvg, InputField, PasswordStrength } from "./authShared"
+import { c, P, font, Spinner, GoogleSvg, InputField, PasswordStrength } from "./AuthShared"
 
 export default function RegisterForm({ onSuccess, onGoogleClick, googleLoading }) {
   const dispatch = useDispatch()

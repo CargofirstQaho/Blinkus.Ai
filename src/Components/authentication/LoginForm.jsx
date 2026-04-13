@@ -202,7 +202,7 @@ import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { motion } from "framer-motion"
 import { api } from "../../utils/api"
-import { c, P, Spinner, GoogleSvg, InputField } from "./authShared"
+import { c, P, Spinner, GoogleSvg, InputField } from "./AuthShared"
 
 export default function LoginForm({ onSuccess, onForgot, onGoogleClick, googleLoading }) {
   const dispatch = useDispatch()
