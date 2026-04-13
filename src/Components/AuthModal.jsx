@@ -2396,7 +2396,7 @@ import OtpVerify from "./authentication/OtpVerify"
 import ForgotPassword from "./authentication/ForgotPassword"
 import ResetOtpStep from "./authentication/ResetOtpStep"
 import ResetPasswordStep from "./authentication/ResetPasswordStep"
-import { N, P, font } from "./authentication/authShared"
+import { N, P, font } from "./authentication/AuthShared"
 
 const STEPS = {
   FORM: "form",

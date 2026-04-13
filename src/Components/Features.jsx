@@ -464,7 +464,7 @@ export default function Features() {
               style={{
                 borderRadius: 20, overflow: "hidden",
                 background: "#fff", border: "1px solid rgba(108,63,197,0.08)",
-                boxShadow: "0 2px 16px rgba(108,63,197,0.04)",
+                // boxShadow: "0 2px 16px rgba(108,63,197,0.04)",
                 transition: "all 0.25s", cursor: "default",
                 boxShadow: `
   0 8px 32px rgba(31,38,135,0.15),
