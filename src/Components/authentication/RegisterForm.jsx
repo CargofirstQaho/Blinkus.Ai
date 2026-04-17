@@ -32,6 +32,13 @@ export default function RegisterForm({ onSuccess, onGoogleClick, googleLoading }
     setSubmitting(true)
     try {
       const data = await api.post("/auth/register", { name: form.name, email: form.email, password: form.password })
+      if (window.gtag) {
+  window.gtag('event', 'conversion', {
+    send_to: 'AW-17763381505/IIeCCPSnmpocEIHinpZC',
+    value: 1.0,
+    currency: 'INR'
+  });
+}
       onSuccess(form.email, data.message)
     } catch (err) {
       dispatch(clearError())

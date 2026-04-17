@@ -2476,6 +2476,13 @@ function AuthModalContent({ isOpen, onClose, defaultTab }) {
         localStorage.setItem("blinkus_refresh", data.refreshToken)
         localStorage.setItem("blinkus_user", JSON.stringify(data.user))
         dispatch({ type: "auth/login/fulfilled", payload: data })
+        if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-17763381505/IIeCCPSnmpocEIHinpZC',
+        value: 1.0,
+        currency: 'INR'
+      });
+    }
         afterAuth()
       } catch (err) {
         setGoogleError(err.message || "Google sign-in failed. Please try again.")
