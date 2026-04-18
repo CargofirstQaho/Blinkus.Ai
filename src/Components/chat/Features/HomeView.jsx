@@ -1192,3 +1192,248 @@ export function HomeView({ input, setInput, handleKeyDown, handleSend, textareaR
     </div>
   )
 }
+
+
+
+
+
+
+
+
+
+
+// import { Sparkles } from "lucide-react"
+// import FeatureSection from "./FeatureSection"
+
+// const PURPLE = "#6c3fc5"
+
+// export function HomeView({ input, setInput, handleKeyDown, handleSend, inputDisabled }) {
+//   const suggestions = [
+//     "What is India's biggest exporter of electronic goods?",
+//     "Calculate the total trade volume for HS Code 8471 last quarter",
+//     "Who are the top 5 importers of textile machinery from Germany?",
+//     "Show me seasonal trends for agricultural exports to the Middle East",
+//   ]
+
+//   return (
+//     <div
+//       style={{
+//         flex: 1,
+//         display: "flex",
+//         flexDirection: "column",
+//         alignItems: "center",
+//         justifyContent: "center",
+//         padding: "20px 20px 40px",
+//         overflowY: "auto",
+//         background: "#fff",
+//       }}
+//     >
+//       <div
+//         style={{
+//           width: "100%",
+//           maxWidth: 700,
+//           display: "flex",
+//           flexDirection: "column",
+//           alignItems: "center",
+//           gap: 30,
+//         }}
+//       >
+//         <div style={{ textAlign: "center" }}>
+//           <div
+//             style={{
+//               width: 80,
+//               height: 80,
+//               margin: "0 auto 20px",
+//               borderRadius: 20,
+//               background: `linear-gradient(135deg, ${PURPLE} 0%, #8b5cf6 100%)`,
+//               display: "flex",
+//               alignItems: "center",
+//               justifyContent: "center",
+//               boxShadow: "0 8px 32px rgba(108,63,197,0.25)",
+//             }}
+//           >
+//             <Sparkles size={38} color="#fff" strokeWidth={2} />
+//           </div>
+//           <h1
+//             style={{
+//               fontSize: 32,
+//               fontWeight: 800,
+//               color: "#0f1b3d",
+//               marginBottom: 12,
+//               letterSpacing: "-0.02em",
+//             }}
+//           >
+//             What can I help with?
+//           </h1>
+//           <p
+//             style={{
+//               fontSize: 15,
+//               color: "#6b7280",
+//               lineHeight: 1.6,
+//               maxWidth: 480,
+//               margin: "0 auto",
+//             }}
+//           >
+//             Ask me anything about global trade, market intelligence, or explore
+//             our powerful analytics modules below.
+//           </p>
+//         </div>
+
+//         <FeatureSection />
+
+//         <div style={{ width: "100%", maxWidth: 600 }}>
+//           <div
+//             style={{
+//               display: "flex",
+//               alignItems: "center",
+//               gap: 10,
+//               marginBottom: 12,
+//             }}
+//           >
+//             <div
+//               style={{
+//                 flex: 1,
+//                 height: 1,
+//                 background: "linear-gradient(to right, #f0edf9, transparent)",
+//               }}
+//             />
+//             <span
+//               style={{
+//                 fontSize: 10,
+//                 fontWeight: 800,
+//                 color: "#c4b5f4",
+//                 letterSpacing: "0.1em",
+//                 textTransform: "uppercase",
+//               }}
+//             >
+//               Try asking
+//             </span>
+//             <div
+//               style={{
+//                 flex: 1,
+//                 height: 1,
+//                 background: "linear-gradient(to left, #f0edf9, transparent)",
+//               }}
+//             />
+//           </div>
+
+//           <div
+//             style={{
+//               display: "grid",
+//               gridTemplateColumns: "1fr 1fr",
+//               gap: 10,
+//               marginBottom: 20,
+//             }}
+//           >
+//             {suggestions.map((suggestion, i) => (
+//               <button
+//                 key={i}
+//                 onClick={() => handleSend(suggestion)}
+//                 disabled={inputDisabled}
+//                 style={{
+//                   padding: "12px 16px",
+//                   borderRadius: 12,
+//                   border: "1px solid #e5e7eb",
+//                   background: "#fff",
+//                   textAlign: "left",
+//                   fontSize: 13,
+//                   color: "#374151",
+//                   lineHeight: 1.4,
+//                   cursor: inputDisabled ? "not-allowed" : "pointer",
+//                   transition: "all 0.2s",
+//                   opacity: inputDisabled ? 0.6 : 1,
+//                 }}
+//                 onMouseEnter={(e) => {
+//                   if (!inputDisabled) {
+//                     e.currentTarget.style.borderColor = PURPLE
+//                     e.currentTarget.style.background = "#fafafa"
+//                   }
+//                 }}
+//                 onMouseLeave={(e) => {
+//                   e.currentTarget.style.borderColor = "#e5e7eb"
+//                   e.currentTarget.style.background = "#fff"
+//                 }}
+//               >
+//                 {suggestion}
+//               </button>
+//             ))}
+//           </div>
+
+//           <div
+//             style={{
+//               position: "relative",
+//               borderRadius: 16,
+//               border: "1.5px solid #e5e7eb",
+//               background: "#fff",
+//               transition: "border-color 0.2s",
+//             }}
+//             onFocus={(e) => (e.currentTarget.style.borderColor = PURPLE)}
+//             onBlur={(e) => (e.currentTarget.style.borderColor = "#e5e7eb")}
+//           >
+//             <textarea
+//               value={input}
+//               onChange={(e) => setInput(e.target.value)}
+//               onKeyDown={handleKeyDown}
+//               disabled={inputDisabled}
+//               placeholder="Message Blinkus..."
+//               style={{
+//                 width: "100%",
+//                 minHeight: 56,
+//                 maxHeight: 200,
+//                 padding: "16px 60px 16px 18px",
+//                 border: "none",
+//                 borderRadius: 16,
+//                 fontSize: 14,
+//                 lineHeight: 1.5,
+//                 resize: "none",
+//                 outline: "none",
+//                 background: "transparent",
+//                 color: "#0f1b3d",
+//                 fontFamily: "inherit",
+//               }}
+//             />
+//             <button
+//               onClick={() => handleSend()}
+//               disabled={!input.trim() || inputDisabled}
+//               style={{
+//                 position: "absolute",
+//                 right: 12,
+//                 bottom: 12,
+//                 width: 36,
+//                 height: 36,
+//                 borderRadius: 10,
+//                 border: "none",
+//                 background:
+//                   input.trim() && !inputDisabled
+//                     ? `linear-gradient(135deg, ${PURPLE} 0%, #8b5cf6 100%)`
+//                     : "#f3f4f6",
+//                 color: "#fff",
+//                 cursor:
+//                   input.trim() && !inputDisabled ? "pointer" : "not-allowed",
+//                 display: "flex",
+//                 alignItems: "center",
+//                 justifyContent: "center",
+//                 transition: "all 0.2s",
+//                 opacity: input.trim() && !inputDisabled ? 1 : 0.5,
+//               }}
+//             >
+//               <svg
+//                 width="18"
+//                 height="18"
+//                 viewBox="0 0 24 24"
+//                 fill="none"
+//                 stroke="currentColor"
+//                 strokeWidth="2"
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//               >
+//                 <line x1="22" y1="2" x2="11" y2="13" />
+//                 <polygon points="22 2 15 22 11 13 2 9 22 2" />
+//               </svg>
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }

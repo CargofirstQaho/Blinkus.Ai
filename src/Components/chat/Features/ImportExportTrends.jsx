@@ -763,9 +763,9 @@ export default function ImportExportTrends({ onBack }) {
 
       <div className="feature-header" style={{ padding: "clamp(12px,3vw,20px) clamp(16px,4vw,24px)", borderBottom: "1px solid #f3f4f6", display: "flex", alignItems: "center", justifyContent: "space-between", flexShrink: 0 }}>
         <div style={{ display: "flex", alignItems: "center", gap: "clamp(8px,2vw,16px)" }}>
-          <button onClick={onBack} style={{ width: "clamp(32px,5vw,36px)", height: "clamp(32px,5vw,36px)", borderRadius: 10, border: "1px solid #e5e7eb", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0 }}>
+          {/* <button onClick={onBack} style={{ width: "clamp(32px,5vw,36px)", height: "clamp(32px,5vw,36px)", borderRadius: 10, border: "1px solid #e5e7eb", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0 }}>
             <ArrowLeft size={16} color={NAVY} />
-          </button>
+          </button> */}
           <h1 style={{ fontSize: "clamp(15px,3vw,18px)", fontWeight: 700, color: NAVY, margin: 0 }}>Market Overview</h1>
         </div>
         <button style={{ padding: "8px 16px", borderRadius: 8, border: "1px solid #e5e7eb", background: "#fff", display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 13, fontWeight: 600, color: NAVY, flexShrink: 0 }}>
